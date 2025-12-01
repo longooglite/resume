@@ -65,7 +65,7 @@ const toggleMobileExpanded = () => {
         target="_blank"
         class="contact-info-link"
       >
-        {{ linkKey }} test
+        {{ linkKey }}
       </a>
     </div>
   </header>
