@@ -53,6 +53,10 @@ interface _GlobalComponents {
   TheHeader: (typeof import('../../app/components/TheHeader/TheHeader.vue'))['default']
   TheHero: (typeof import('../../app/components/TheHero/TheHero.vue'))['default']
   TheSummary: (typeof import('../../app/components/TheSummary/TheSummary.vue'))['default']
+  TheTechnologiesTechnologyBlock: (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyBlock.vue'))['default']
+  TheTechnologiesTechnologyBlockTechnologyDetails: (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyDetails/TechnologyDetails.vue'))['default']
+  TheTechnologiesTechnologyBlockTechnologyHeader: (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyHeader/TechnologyHeader.vue'))['default']
+  TheTechnologiesTechnologyBlockTechnologyHeaderTechnologySubheader: (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyHeader/TechnologySubheader.vue'))['default']
   TheTechnologies: (typeof import('../../app/components/TheTechnologies/TheTechnologies.vue'))['default']
   TheTooltip: (typeof import('../../app/components/TheTooltip/TheTooltip.vue'))['default']
   NuxtWelcome: (typeof import('../../node_modules/nuxt/dist/app/components/welcome.vue'))['default']
@@ -113,6 +117,18 @@ interface _GlobalComponents {
   >
   LazyTheSummary: LazyComponent<
     (typeof import('../../app/components/TheSummary/TheSummary.vue'))['default']
+  >
+  LazyTheTechnologiesTechnologyBlock: LazyComponent<
+    (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyBlock.vue'))['default']
+  >
+  LazyTheTechnologiesTechnologyBlockTechnologyDetails: LazyComponent<
+    (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyDetails/TechnologyDetails.vue'))['default']
+  >
+  LazyTheTechnologiesTechnologyBlockTechnologyHeader: LazyComponent<
+    (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyHeader/TechnologyHeader.vue'))['default']
+  >
+  LazyTheTechnologiesTechnologyBlockTechnologyHeaderTechnologySubheader: LazyComponent<
+    (typeof import('../../app/components/TheTechnologies/TechnologyBlock/TechnologyHeader/TechnologySubheader.vue'))['default']
   >
   LazyTheTechnologies: LazyComponent<
     (typeof import('../../app/components/TheTechnologies/TheTechnologies.vue'))['default']

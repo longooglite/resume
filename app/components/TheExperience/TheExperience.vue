@@ -2,16 +2,11 @@
 import ExperienceBlock from '@/components/TheExperience/ExperienceBlock/ExperienceBlock.vue'
 import { useResumeData } from '@/composables/useResumeData'
 import { MAX_APP_WIDTH } from '@/utils/styles'
-import TechSearch from '@/components/TechSearch/TechSearch.vue'
 const { experiencesSorted } = useResumeData()
-console.log('KIRK', 'KIRK')
-console.log(experiencesSorted.value)
-console.log('KIRK', 'KIRK')
 </script>
 <template>
   <div class="the-experience">
     <h2>Experience</h2>
-    <TechSearch />
     <div class="experience-blocks" :style="{ maxWidth: `${MAX_APP_WIDTH}px` }">
       <ExperienceBlock
         v-for="exp in experiencesSorted"

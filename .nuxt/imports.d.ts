@@ -202,6 +202,7 @@ export { defineLazyHydrationComponent } from '#app/composables/lazy-hydration'
 export { useResumeData } from '../app/composables/useResumeData'
 export { useScrollBoundary } from '../app/composables/useScrollBoundary'
 export { experienceContainsTechnology } from '../app/utils/experienceContainsTech'
+export { skillLevelToString } from '../app/utils/skillLevelToString'
 export { MAX_APP_WIDTH, palette } from '../app/utils/styles'
 export { technologySynonyms } from '../app/utils/technologySynonyms'
 export {
