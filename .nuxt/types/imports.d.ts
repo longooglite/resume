@@ -91,6 +91,7 @@ declare global {
   const shallowReadonly: typeof import('vue').shallowReadonly
   const shallowRef: typeof import('vue').shallowRef
   const showError: typeof import('../../node_modules/nuxt/dist/app/composables/error').showError
+  const skillLevelToString: typeof import('../../app/utils/skillLevelToString').skillLevelToString
   const storeToRefs: typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables').storeToRefs
   const technologySynonyms: typeof import('../../app/utils/technologySynonyms').technologySynonyms
   const toRaw: typeof import('vue').toRaw
@@ -426,6 +427,9 @@ declare module 'vue' {
     readonly shallowRef: UnwrapRef<(typeof import('vue'))['shallowRef']>
     readonly showError: UnwrapRef<
       (typeof import('../../node_modules/nuxt/dist/app/composables/error'))['showError']
+    >
+    readonly skillLevelToString: UnwrapRef<
+      (typeof import('../../app/utils/skillLevelToString'))['skillLevelToString']
     >
     readonly storeToRefs: UnwrapRef<
       (typeof import('../../node_modules/@pinia/nuxt/dist/runtime/composables'))['storeToRefs']

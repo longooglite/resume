@@ -122,7 +122,7 @@
       "achievements": [
         "Implemented A/B testing infrastructure and executed experiments (Optimizely)",
         "Interviewed and recommended junior developer hire",
-        "Rewrote PL/PD pages (outcomes not measured)"
+        "Rewrote PL/PD pages"
       ],
       "tech_stack": [
         "TypeScript",

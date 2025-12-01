@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { useResumeData } from '@/composables/useResumeData'
 import { experienceContainsTechnology } from '@/utils/experienceContainsTech'
+import { skillLevelToString } from '@/utils/skillLevelToString'
 
 const { technicalSkills, experiences } = useResumeData()
 const sortedTechnicalSkills = computed(() => {
@@ -9,12 +10,14 @@ const sortedTechnicalSkills = computed(() => {
     .filter((skill) => skill.level > 5)
     .sort((a, b) => b.level - a.level)
     .map((skill) => {
+      const skillLevelText = skillLevelToString(skill.level)
       const experience = experiences.value
         .filter((exp) => experienceContainsTechnology(exp, skill.name))
         .map((experience) => experience.company)
         .join(', ')
       return {
         ...skill,
+        skillLevelText,
         experience,
       }
     })
@@ -30,8 +33,8 @@ const sortedTechnicalSkills = computed(() => {
         :key="skill.name"
       >
         <h3 class="technology-name">
-          {{ skill.name }}
-          <span class="technology-level">{{ skill.level }}/10</span>
+          {{ skill.name }} -
+          <span class="technology-level">{{ skill.skillLevelText }}</span>
         </h3>
         <p class="technology-years">{{ skill.years }} years experience</p>
         <p class="technology-last-used">Last used: {{ skill.last_used }}</p>
