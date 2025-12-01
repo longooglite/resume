@@ -14,11 +14,7 @@ export const useSearchStore = defineStore('search', () => {
     )
   })
   const updateSearch = (newSearch: string) => {
-    console.log(newSearch)
     search.value = newSearch
-    console.log(filteredExperiences.value)
   }
-  console.log(filteredExperiences.value)
-  console.log(search.value)
   return { search, filteredExperiences, updateSearch }
 })

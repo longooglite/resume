@@ -1,37 +1,18 @@
 <script setup lang="ts">
-import { computed, provide } from 'vue'
+import { provide } from 'vue'
 import { WorkExperience } from '@/types'
 import ExperienceHeader from './ExperienceHeader/ExperienceHeader.vue'
 import { currentExperienceSymbol } from '@/symbols'
 import ExperienceDetails from './ExperienceDetails/ExperienceDetails.vue'
-import { storeToRefs } from 'pinia'
-import { useSearchStore } from '@/stores/searchStore/searchStore'
 
 const props = defineProps<{
   experience: WorkExperience
 }>()
 
-const searchStore = useSearchStore()
-const { filteredExperiences } = storeToRefs(searchStore)
-
-const anyExperiencesSelected = computed(() => {
-  return filteredExperiences.value.length > 0
-})
-
-const currentExperienceSelected = computed(() => {
-  return filteredExperiences.value.some(
-    (experience) => experience.company === props.experience.company,
-  )
-})
-
-const isUnselected = computed(() => {
-  return anyExperiencesSelected.value && !currentExperienceSelected.value
-})
-
 provide(currentExperienceSymbol, props.experience)
 </script>
 <template>
-  <div class="experience-block" :class="{ unselected: isUnselected }">
+  <div class="experience-block">
     <ExperienceHeader />
     <ExperienceDetails />
   </div>
@@ -50,7 +31,12 @@ provide(currentExperienceSymbol, props.experience)
   padding-bottom: 10px;
   transition: height 0.1s ease-in-out;
 }
-.experience-block.unselected {
-  opacity: 0.5;
+@media (max-width: 640px) {
+  .experience-block {
+    width: 100%;
+    border-left: none;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
 }
 </style>

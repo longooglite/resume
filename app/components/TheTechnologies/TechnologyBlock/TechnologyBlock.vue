@@ -27,4 +27,13 @@ provide(technologySymbol, props.technology)
   margin-right: 10px;
   margin-bottom: 10px;
 }
+
+@media (max-width: 640px) {
+  .technology {
+    width: 100%;
+    border-left: none;
+    border-bottom: none;
+    margin-bottom: 0;
+  }
+}
 </style>

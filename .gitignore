@@ -40,4 +40,7 @@ Thumbs.db
 .eslintcache
 .cache/
 
+# Nuxt build directory
+.nuxt/
+
 

@@ -16,7 +16,7 @@
       "github": "",
       "website": "",
       "Demo - Physical Media Library": "https://movie-list.klonguski.com",
-      "resume": "https://host-resume-pdf.s3.us-east-1.amazonaws.com/Kirk+Longuski+-+Dec+2025.pdf"
+      "resume [PDF]": "https://host-resume-pdf.s3.us-east-1.amazonaws.com/Kirk+Longuski+-+Dec+2025.pdf"
     }
   },
   "professional_summary": "10-year veteran Front-End Architect and Team Lead specializing in the modernization of complex enterprise systems using TypeScript, React, and Vue. Proven track record of technical excellence, including driving a 40-point Lighthouse performance uplift and scaling automated test coverage to 90% across distributed repositories. Deep expertise in bridging engineering and product goals, managing agile workflows, and implementing robust CI/CD pipelines (Azure DevOps/AWS). Experienced in hiring, mentoring, and leading cross-functional teams within HIPAA-compliant Healthcare and E-commerce environments.",

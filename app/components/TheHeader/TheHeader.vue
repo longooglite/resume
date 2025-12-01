@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { useResumeData } from '@/composables/useResumeData'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
+import { PhCaretDown, PhCaretUp } from 'phosphor-vue'
 
 const resumeData = useResumeData()
 const { basics } = resumeData.resume.value
@@ -22,6 +23,11 @@ onMounted(() => {
 onUnmounted(() => {
   window.removeEventListener('scroll', setScroll)
 })
+
+const mobileExpanded = ref(false)
+const toggleMobileExpanded = () => {
+  mobileExpanded.value = !mobileExpanded.value
+}
 </script>
 <template>
   <header class="the-header" v-show="isScrolled">
@@ -39,6 +45,27 @@ onUnmounted(() => {
         class="contact-info-link"
       >
         {{ linkKey }}
+      </a>
+    </div>
+    <div class="contact-info-mobile">
+      <button @click="toggleMobileExpanded">
+        Contact Info
+        <PhCaretDown v-if="mobileExpanded" />
+        <PhCaretUp v-else />
+      </button>
+      <a v-show="mobileExpanded" :href="telHref">{{ basics.phone }}</a>
+      <a v-show="mobileExpanded" :href="`mailto:${basics.email}`">{{
+        basics.email
+      }}</a>
+      <a
+        v-show="mobileExpanded"
+        v-for="[linkKey, link] in links"
+        :key="linkKey"
+        :href="link"
+        target="_blank"
+        class="contact-info-link"
+      >
+        {{ linkKey }} test
       </a>
     </div>
   </header>
@@ -70,9 +97,51 @@ onUnmounted(() => {
 .contact-info a {
   font-size: 0.8rem;
   margin-bottom: 10px;
-  color: var(--text-color);
+  color: var(--primary-highlight);
+}
+.contact-info a:visited {
+  color: var(--secondary-highlight);
 }
 .contact-info-link {
   text-transform: capitalize;
+}
+.contact-info-mobile {
+  display: none;
+}
+.contact-info-mobile button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+@media (max-width: 640px) {
+  .the-header {
+    padding-top: 10px;
+    width: 100%;
+    border-left: none;
+    margin-bottom: 0;
+    border-left: none;
+  }
+  .contact-info {
+    display: none;
+  }
+  .contact-info-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 10px;
+  }
+  .contact-info-mobile a {
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    color: var(--primary-highlight);
+  }
+  .contact-info-mobile a:visited {
+    color: var(--secondary-highlight);
+  }
 }
 </style>

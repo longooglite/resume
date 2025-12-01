@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useHead } from 'nuxt/app'
+
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
@@ -26,7 +28,7 @@ useHead({
   script: [
     {
       type: 'application/ld+json',
-      children: JSON.stringify(jsonLd),
+      innerHTML: JSON.stringify(jsonLd),
     },
   ],
 })
@@ -43,6 +45,8 @@ useHead({
   --text-color: #0f172a;
   --border-color: #ccc;
   --app-max-width: 1200px;
+  --primary-highlight: #0f172a;
+  --secondary-highlight: #475569;
 }
 body {
   background-color: var(--app-bg);
@@ -78,5 +82,6 @@ h6 {
     'Liberation Sans',
     sans-serif;
   font-weight: 600;
+  color: var(--primary-highlight);
 }
 </style>

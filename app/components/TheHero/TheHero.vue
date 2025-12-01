@@ -40,7 +40,7 @@ const telHref = computed(() => {
   margin: 0 auto;
 }
 .the-hero h1 {
-  font-size: 2rem;
+  font-size: 8rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 10px;
@@ -54,10 +54,27 @@ const telHref = computed(() => {
   flex-direction: row;
   gap: 10px;
   padding-left: 10px;
+  justify-content: center;
 }
 .contact-info a {
   font-size: 0.8rem;
   margin-bottom: 10px;
   color: var(--text-color);
+}
+.contact-info-link {
+  text-transform: capitalize;
+}
+@media (max-width: 640px) {
+  .the-hero h1 {
+    font-size: 4rem;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
 }
 </style>

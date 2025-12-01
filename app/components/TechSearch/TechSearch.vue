@@ -5,7 +5,6 @@ import { ref } from 'vue'
 const searchStore = useSearchStore()
 const search = ref('')
 const handleSearch = () => {
-  console.log(search.value)
   searchStore.updateSearch(search.value)
 }
 </script>
