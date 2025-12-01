@@ -64,4 +64,17 @@ const telHref = computed(() => {
 .contact-info-link {
   text-transform: capitalize;
 }
+@media (max-width: 640px) {
+  .the-hero h1 {
+    font-size: 4rem;
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 0;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+}
 </style>
