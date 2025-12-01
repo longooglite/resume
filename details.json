@@ -15,7 +15,7 @@
       "linkedin": "https://www.linkedin.com/in/kirk-longuski-7341a924/",
       "github": "",
       "website": "",
-      "Movie List": "https://movie-list.klonguski.com",
+      "Demo - Physical Media Library": "https://movie-list.klonguski.com",
       "resume": "https://host-resume-pdf.s3.us-east-1.amazonaws.com/Kirk+Longuski+-+Dec+2025.pdf"
     }
   },
@@ -71,7 +71,14 @@
         "LaunchDarkly",
         "Storybook"
       ],
-      "aws_services": ["S3", "CloudFront", "Lambda", "API Gateway", "AppSync", "Amplify"],
+      "aws_services": [
+        "S3",
+        "CloudFront",
+        "Lambda",
+        "API Gateway",
+        "AppSync",
+        "Amplify"
+      ],
       "ci_cd": "Azure DevOps pipelines/boards/repos + ArgoCD GitOps to AWS EKS",
       "architecture": {
         "repos": "Custom solutions for both mono and distributed repositories",
@@ -117,8 +124,24 @@
         "Interviewed and recommended junior developer hire",
         "Rewrote PL/PD pages (outcomes not measured)"
       ],
-      "tech_stack": ["TypeScript", "React", "Next.js", "Vue (internal tools)", "DataTables", "JavaScript", "CSS", "HTML"],
-      "tools_and_platforms": ["Git", "GitHub", "GitHub Actions", "Cypress", "Edgio (CDN/edge)", "Optimizely"],
+      "tech_stack": [
+        "TypeScript",
+        "React",
+        "Next.js",
+        "Vue (internal tools)",
+        "DataTables",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
+      "tools_and_platforms": [
+        "Git",
+        "GitHub",
+        "GitHub Actions",
+        "Cypress",
+        "Edgio (CDN/edge)",
+        "Optimizely"
+      ],
       "architecture": {
         "rendering": ["Next.js SSR"],
         "internal_tools": ["Vue"]
@@ -126,7 +149,12 @@
       "ci_cd": "GitHub Actions",
       "cdn_and_edge": {
         "provider": "Edgio",
-        "responsibilities": ["Cache busts", "Environment secrets", "Provisioned dev-specific environments", "Partnered with dedicated Edgio support"]
+        "responsibilities": [
+          "Cache busts",
+          "Environment secrets",
+          "Provisioned dev-specific environments",
+          "Partnered with dedicated Edgio support"
+        ]
       },
       "notable_challenges": [
         "No previous developers remained; addressed by reading and documenting code as encountered",
@@ -154,7 +182,17 @@
       "achievements": [
         "Retired a home-rolled front-end framework in favor of React to improve readability, developer experience, and maintainability"
       ],
-      "tech_stack": ["TypeScript (led transition from JS)", "TypeScript", "React", "Redux", "D3", "Highcharts", "JavaScript", "CSS", "HTML"],
+      "tech_stack": [
+        "TypeScript (led transition from JS)",
+        "TypeScript",
+        "React",
+        "Redux",
+        "D3",
+        "Highcharts",
+        "JavaScript",
+        "CSS",
+        "HTML"
+      ],
       "architecture": {
         "app_type": "SPA"
       },
@@ -174,7 +212,14 @@
         "Redesigned the customer-facing site",
         "Implemented end-to-end testing"
       ],
-      "tech_stack": ["JavaScript", "CSS", "HTML", "jQuery", "jQuery UI", "Nightwatch"]
+      "tech_stack": [
+        "JavaScript",
+        "CSS",
+        "HTML",
+        "jQuery",
+        "jQuery UI",
+        "Nightwatch"
+      ]
     },
     {
       "title": "Full Stack Engineer",
@@ -206,64 +251,189 @@
   ],
   "skills": {
     "technical": [
-      {"name": "JavaScript", "level": 10, "years": 10, "last_used": "2025-11"},
-      {"name": "TypeScript", "level": 10, "years": 8, "last_used": "2025-11"},
-      {"name": "HTML", "level": 10, "years": 10, "last_used": "2025-11"},
-      {"name": "CSS/Sass/LESS", "level": 10, "years": 10, "last_used": "2025-11"},
-      {"name": "Node.js", "level": 8, "years": 8, "last_used": "2025-06"},
-      {"name": "PHP", "level": 5, "years": 1, "last_used": "2016"},
-      {"name": "React", "level": 10, "years": 8, "last_used": "2025-11"},
-      {"name": "Next.js (SSR)", "level": 8, "years": 3, "last_used": "2025-06"},
-      {"name": "Redux", "level": 8, "years": 3, "last_used": "2025-06"},
-      {"name": "Vue", "level": 8, "years": 2, "last_used": "2022-11"},
-      {"name": "Nuxt", "level": 8, "years": 2, "last_used": "2022-11"},
-      {"name": "React Native", "level": 6, "years": 1, "last_used": "2025-11"},
-      {"name": "jQuery", "level": 10, "years": 6, "last_used": "2022-02"},
-      {"name": "D3", "level": 6, "years": 5, "last_used": "2022-02"},
-      {"name": "Highcharts", "level": 6, "years": 5, "last_used": "2022-02"},
-      {"name": "DataTables", "level": 6, "years": 5, "last_used": "2022-02"},
-      {"name": "Jest", "level": 8, "years": 3, "last_used": "2025-06"},
-      {"name": "Cypress", "level": 6, "years": 1, "last_used": "2022-11"},
-      {"name": "Nightwatch", "level": 5, "years": 1, "last_used": "2017-01"},
-      {"name": "Emotion (CSS-in-JS)", "level": 8, "years": 2, "last_used": "2025-06"},
-      {"name": "Git", "level": 10, "years": 10, "last_used": "2025-11"},
-      {"name": "GitHub", "level": 8, "years": 8, "last_used": "2025-11"},
-      {"name": "GitHub Actions", "level": 0, "years": 0, "last_used": null},
-      {"name": "Azure DevOps", "level": 7, "years": 3, "last_used": "2025-06"},
-      {"name": "ArgoCD", "level": 3, "years": "<1", "last_used": "2025-11"},
-      {"name": "Kubernetes (EKS)", "level": 0, "years": 0, "last_used": null},
-      {"name": "AWS (overall)", "level": 0, "years": 0, "last_used": null},
-      {"name": "S3", "level": 0, "years": 0, "last_used": null},
-      {"name": "CloudFront", "level": 0, "years": 0, "last_used": null},
-      {"name": "Lambda", "level": 0, "years": 0, "last_used": null},
-      {"name": "API Gateway", "level": 0, "years": 0, "last_used": null},
-      {"name": "AppSync", "level": 0, "years": 0, "last_used": null},
-      {"name": "Amplify", "level": 0, "years": 0, "last_used": null},
-      {"name": "Edgio (CDN/edge)", "level": 0, "years": 0, "last_used": null},
-      {"name": "LaunchDarkly", "level": 0, "years": 0, "last_used": null},
-      {"name": "Optimizely", "level": 0, "years": 0, "last_used": null},
-      {"name": "Storybook", "level": 0, "years": 0, "last_used": null},
-      {"name": "Accessibility (WCAG/ARIA)", "level": 0, "years": 0, "last_used": null},
-      {"name": "Performance/Core Web Vitals", "level": 0, "years": 0, "last_used": null},
-      {"name": "Security (OWASP/HIPAA context)", "level": 0, "years": 0, "last_used": null},
-      {"name": "System/Solution Architecture", "level": 0, "years": 0, "last_used": null},
-      {"name": "Monorepo tooling (Nx/Turborepo/Bazel)", "level": 0, "years": 0, "last_used": null},
-      {"name": "Build tools (Vite/Webpack/Rspack/Rollup/esbuild/SWC)", "level": 0, "years": 0, "last_used": null},
-      {"name": "Realtime (WebSockets/SSE/WebRTC)", "level": 0, "years": 0, "last_used": null},
-      {"name": "Internationalization (i18n/l10n, RTL)", "level": 0, "years": 0, "last_used": null},
-      {"name": "PWA/Service Workers", "level": 0, "years": 0, "last_used": null},
-      {"name": "Observability (OpenTelemetry/Sentry/Datadog)", "level": 0, "years": 0, "last_used": null},
-      {"name": "Feature flags/Experimentation (LD/Optimizely/Statsig)", "level": 0, "years": 0, "last_used": null}
+      {
+        "name": "JavaScript",
+        "level": 10,
+        "years": 10,
+        "last_used": "2025-11"
+      },
+      { "name": "TypeScript", "level": 10, "years": 8, "last_used": "2025-11" },
+      { "name": "HTML", "level": 10, "years": 10, "last_used": "2025-11" },
+      {
+        "name": "CSS/Sass/LESS",
+        "level": 10,
+        "years": 10,
+        "last_used": "2025-11"
+      },
+      { "name": "Node.js", "level": 8, "years": 8, "last_used": "2025-06" },
+      { "name": "PHP", "level": 5, "years": 1, "last_used": "2016" },
+      { "name": "React", "level": 10, "years": 8, "last_used": "2025-11" },
+      {
+        "name": "Next.js (SSR)",
+        "level": 8,
+        "years": 3,
+        "last_used": "2025-06"
+      },
+      { "name": "Redux", "level": 8, "years": 3, "last_used": "2025-06" },
+      { "name": "Vue", "level": 8, "years": 2, "last_used": "2022-11" },
+      { "name": "Nuxt", "level": 8, "years": 2, "last_used": "2022-11" },
+      {
+        "name": "React Native",
+        "level": 6,
+        "years": 1,
+        "last_used": "2025-11"
+      },
+      { "name": "jQuery", "level": 10, "years": 6, "last_used": "2022-02" },
+      { "name": "D3", "level": 6, "years": 5, "last_used": "2022-02" },
+      { "name": "Highcharts", "level": 6, "years": 5, "last_used": "2022-02" },
+      { "name": "DataTables", "level": 6, "years": 5, "last_used": "2022-02" },
+      { "name": "Jest", "level": 8, "years": 3, "last_used": "2025-06" },
+      { "name": "Cypress", "level": 6, "years": 1, "last_used": "2022-11" },
+      { "name": "Nightwatch", "level": 5, "years": 1, "last_used": "2017-01" },
+      {
+        "name": "Emotion (CSS-in-JS)",
+        "level": 8,
+        "years": 2,
+        "last_used": "2025-06"
+      },
+      { "name": "Git", "level": 10, "years": 10, "last_used": "2025-11" },
+      { "name": "GitHub", "level": 8, "years": 8, "last_used": "2025-11" },
+      { "name": "GitHub Actions", "level": 0, "years": 0, "last_used": null },
+      {
+        "name": "Azure DevOps",
+        "level": 7,
+        "years": 3,
+        "last_used": "2025-06"
+      },
+      { "name": "ArgoCD", "level": 3, "years": "<1", "last_used": "2025-11" },
+      { "name": "Kubernetes (EKS)", "level": 0, "years": 0, "last_used": null },
+      { "name": "AWS (overall)", "level": 0, "years": 0, "last_used": null },
+      { "name": "S3", "level": 0, "years": 0, "last_used": null },
+      { "name": "CloudFront", "level": 0, "years": 0, "last_used": null },
+      { "name": "Lambda", "level": 0, "years": 0, "last_used": null },
+      { "name": "API Gateway", "level": 0, "years": 0, "last_used": null },
+      { "name": "AppSync", "level": 0, "years": 0, "last_used": null },
+      { "name": "Amplify", "level": 0, "years": 0, "last_used": null },
+      { "name": "Edgio (CDN/edge)", "level": 0, "years": 0, "last_used": null },
+      { "name": "LaunchDarkly", "level": 0, "years": 0, "last_used": null },
+      { "name": "Optimizely", "level": 0, "years": 0, "last_used": null },
+      { "name": "Storybook", "level": 0, "years": 0, "last_used": null },
+      {
+        "name": "Accessibility (WCAG/ARIA)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Performance/Core Web Vitals",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Security (OWASP/HIPAA context)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "System/Solution Architecture",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Monorepo tooling (Nx/Turborepo/Bazel)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Build tools (Vite/Webpack/Rspack/Rollup/esbuild/SWC)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Realtime (WebSockets/SSE/WebRTC)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Internationalization (i18n/l10n, RTL)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "PWA/Service Workers",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Observability (OpenTelemetry/Sentry/Datadog)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Feature flags/Experimentation (LD/Optimizely/Statsig)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      }
     ],
     "leadership_and_management": [
-      {"name": "Hiring / interviewing", "level": 8, "years": 5, "last_used": "2025-06"},
-      {"name": "Mentorship / coaching", "level": 8, "years": 6, "last_used": "2025-06"},
-      {"name": "Program / project management", "level": 8, "years": 6, "last_used": "2025-06"},
-      {"name": "Stakeholder communication", "level": 8, "years": 8, "last_used": "2025-06"},
-      {"name": "Roadmapping / OKRs", "level": 0, "years": 0, "last_used": null},
-      {"name": "Vendor / budget management", "level": 0, "years": 0, "last_used": null},
-      {"name": "Cross-functional leadership (Design/PM/BE/Data)", "level": 0, "years": 0, "last_used": null},
-      {"name": "Executive reporting", "level": 0, "years": 0, "last_used": null}
+      {
+        "name": "Hiring / interviewing",
+        "level": 8,
+        "years": 5,
+        "last_used": "2025-06"
+      },
+      {
+        "name": "Mentorship / coaching",
+        "level": 8,
+        "years": 6,
+        "last_used": "2025-06"
+      },
+      {
+        "name": "Program / project management",
+        "level": 8,
+        "years": 6,
+        "last_used": "2025-06"
+      },
+      {
+        "name": "Stakeholder communication",
+        "level": 8,
+        "years": 8,
+        "last_used": "2025-06"
+      },
+      {
+        "name": "Roadmapping / OKRs",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Vendor / budget management",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Cross-functional leadership (Design/PM/BE/Data)",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      },
+      {
+        "name": "Executive reporting",
+        "level": 0,
+        "years": 0,
+        "last_used": null
+      }
     ],
     "missing_initialized_as_zero": true
   },
@@ -275,33 +445,86 @@
     }
   ],
   "in_demand_skills_2025": [
-    {"name": "TypeScript", "supported_by": ["TypeScript"]},
-    {"name": "React", "supported_by": ["React"]},
-    {"name": "Vue", "supported_by": ["Vue"]},
-    {"name": "Next.js (SSR)", "supported_by": ["Next.js (SSR)"]},
-    {"name": "Nuxt", "supported_by": ["Nuxt"]},
-    {"name": "State management", "supported_by": ["Redux", "Vue (Pinia/Vuex not provided)"]},
-    {"name": "Automated testing (unit/E2E)", "supported_by": ["Jest", "Cypress", "Nightwatch"]},
-    {"name": "Web performance & Core Web Vitals", "supported_by": ["Performance/Core Web Vitals"]},
-    {"name": "Accessibility", "supported_by": ["Accessibility (WCAG/ARIA)"]},
-    {"name": "Front-end security", "supported_by": ["Security (OWASP/HIPAA context)"]},
-    {"name": "CI/CD", "supported_by": ["Azure DevOps", "GitHub Actions", "ArgoCD"]},
-    {"name": "Cloud & Edge (AWS, CDN)", "supported_by": ["AWS (overall)", "CloudFront", "Edgio (CDN/edge)"]},
-    {"name": "Design systems & Storybook", "supported_by": ["Storybook"]},
-    {"name": "Monorepos & micro-frontends", "supported_by": ["Monorepo tooling (Nx/Turborepo/Bazel)"]},
-    {"name": "Observability & quality", "supported_by": ["Observability (OpenTelemetry/Sentry/Datadog)"]},
-    {"name": "Experimentation & feature flags", "supported_by": ["LaunchDarkly", "Optimizely"]},
-    {"name": "Data fetching (REST/GraphQL)", "supported_by": ["API Gateway", "AppSync"]},
-    {"name": "Serverless & edge compute", "supported_by": ["Lambda", "CloudFront", "Edgio (CDN/edge)"]},
-    {"name": "Kubernetes & GitOps", "supported_by": ["ArgoCD", "Kubernetes (EKS)"]},
-    {"name": "AI-assisted development", "supported_by": []},
-    {"name": "PWA & mobile-first", "supported_by": ["React Native", "PWA/Service Workers"]},
-    {"name": "Internationalization", "supported_by": ["Internationalization (i18n/l10n, RTL)"]},
-    {"name": "System design & architecture", "supported_by": ["System/Solution Architecture"]},
-    {"name": "Leadership: hiring & mentorship", "supported_by": ["Hiring / interviewing", "Mentorship / coaching"]},
-    {"name": "Program / project delivery", "supported_by": ["Program / project management"]},
-    {"name": "Stakeholder communication & roadmapping", "supported_by": ["Stakeholder communication", "Roadmapping / OKRs"]}
+    { "name": "TypeScript", "supported_by": ["TypeScript"] },
+    { "name": "React", "supported_by": ["React"] },
+    { "name": "Vue", "supported_by": ["Vue"] },
+    { "name": "Next.js (SSR)", "supported_by": ["Next.js (SSR)"] },
+    { "name": "Nuxt", "supported_by": ["Nuxt"] },
+    {
+      "name": "State management",
+      "supported_by": ["Redux", "Vue (Pinia/Vuex not provided)"]
+    },
+    {
+      "name": "Automated testing (unit/E2E)",
+      "supported_by": ["Jest", "Cypress", "Nightwatch"]
+    },
+    {
+      "name": "Web performance & Core Web Vitals",
+      "supported_by": ["Performance/Core Web Vitals"]
+    },
+    { "name": "Accessibility", "supported_by": ["Accessibility (WCAG/ARIA)"] },
+    {
+      "name": "Front-end security",
+      "supported_by": ["Security (OWASP/HIPAA context)"]
+    },
+    {
+      "name": "CI/CD",
+      "supported_by": ["Azure DevOps", "GitHub Actions", "ArgoCD"]
+    },
+    {
+      "name": "Cloud & Edge (AWS, CDN)",
+      "supported_by": ["AWS (overall)", "CloudFront", "Edgio (CDN/edge)"]
+    },
+    { "name": "Design systems & Storybook", "supported_by": ["Storybook"] },
+    {
+      "name": "Monorepos & micro-frontends",
+      "supported_by": ["Monorepo tooling (Nx/Turborepo/Bazel)"]
+    },
+    {
+      "name": "Observability & quality",
+      "supported_by": ["Observability (OpenTelemetry/Sentry/Datadog)"]
+    },
+    {
+      "name": "Experimentation & feature flags",
+      "supported_by": ["LaunchDarkly", "Optimizely"]
+    },
+    {
+      "name": "Data fetching (REST/GraphQL)",
+      "supported_by": ["API Gateway", "AppSync"]
+    },
+    {
+      "name": "Serverless & edge compute",
+      "supported_by": ["Lambda", "CloudFront", "Edgio (CDN/edge)"]
+    },
+    {
+      "name": "Kubernetes & GitOps",
+      "supported_by": ["ArgoCD", "Kubernetes (EKS)"]
+    },
+    { "name": "AI-assisted development", "supported_by": [] },
+    {
+      "name": "PWA & mobile-first",
+      "supported_by": ["React Native", "PWA/Service Workers"]
+    },
+    {
+      "name": "Internationalization",
+      "supported_by": ["Internationalization (i18n/l10n, RTL)"]
+    },
+    {
+      "name": "System design & architecture",
+      "supported_by": ["System/Solution Architecture"]
+    },
+    {
+      "name": "Leadership: hiring & mentorship",
+      "supported_by": ["Hiring / interviewing", "Mentorship / coaching"]
+    },
+    {
+      "name": "Program / project delivery",
+      "supported_by": ["Program / project management"]
+    },
+    {
+      "name": "Stakeholder communication & roadmapping",
+      "supported_by": ["Stakeholder communication", "Roadmapping / OKRs"]
+    }
   ],
   "generated_at": "2025-11-26"
 }
-
