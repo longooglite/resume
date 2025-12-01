@@ -7,7 +7,7 @@ frontend:
         - nvm use 20
         - node -v
         - corepack enable
-        - corepack prepare yarn@stable --activate
+        - corepack prepare yarn@1.22.22 --activate
         - yarn --version
         - yarn install --frozen-lockfile
     build:
