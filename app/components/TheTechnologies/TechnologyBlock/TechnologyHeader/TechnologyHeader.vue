@@ -3,6 +3,7 @@ import { technologySymbol } from '@/symbols'
 import { RatedSkill } from '@/types'
 import { skillLevelToString } from '@/utils/skillLevelToString'
 import { computed, inject } from 'vue'
+import ExperienceBadge from './ExperienceBadge/ExperienceBadge.vue'
 
 const technology = inject<RatedSkill>(technologySymbol)
 
@@ -13,6 +14,6 @@ const skillLevelText = computed(() => {
 <template>
   <h3 class="technology-name">
     {{ technology.name }} -
-    <span class="technology-level">{{ skillLevelText }}</span>
+    <ExperienceBadge :experience="skillLevelText" />
   </h3>
 </template>

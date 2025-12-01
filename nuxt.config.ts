@@ -12,6 +12,11 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: ['@pinia/nuxt'],
+  app: {
+    head: {
+      title: 'Kirk Longuski',
+    },
+  },
   routeRules: {
     '/**': { prerender: true },
   },
