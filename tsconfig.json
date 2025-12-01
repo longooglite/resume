@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["app/*"]
+    },
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "types": ["nuxt", "vite/client"]
+  },
+  "include": ["app/**/*.ts", "app/**/*.vue", "nuxt.config.ts"]
+}
