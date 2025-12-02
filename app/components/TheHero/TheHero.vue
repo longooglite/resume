@@ -3,7 +3,7 @@ import { useResumeData } from '@/composables/useResumeData'
 import { computed } from 'vue'
 import TheSummary from '@/components/TheSummary/TheSummary.vue'
 import { useTheme } from '@/composables/useTheme'
-import { PhMoonStars, PhSun } from 'phosphor-vue'
+import { PhMoonStars } from 'phosphor-vue'
 const props = defineProps<{
   loaded: boolean
 }>()
@@ -22,9 +22,12 @@ const { toggleTheme, theme } = useTheme()
 <template>
   <div class="the-hero" v-show="props.loaded">
     <h1>{{ basics.name }}</h1>
-    <button @click="toggleTheme">
-      <PhMoonStars v-if="theme === 'light'" />
-      <PhSun v-if="theme === 'dark'" />
+    <button
+      @click="toggleTheme"
+      :aria-pressed="theme === 'dark'"
+      aria-label="Toggle dark mode"
+    >
+      <PhMoonStars aria-hidden="true" />
     </button>
     <div class="contact-info">
       <a :href="telHref">{{ basics.phone }}</a>
@@ -34,6 +37,7 @@ const { toggleTheme, theme } = useTheme()
         :key="linkKey"
         :href="link as string"
         target="_blank"
+        rel="noopener noreferrer"
         class="contact-info-link"
       >
         {{ linkKey }}
