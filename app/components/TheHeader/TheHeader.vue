@@ -136,19 +136,32 @@ const toggleMobileExpanded = () => {
     margin-bottom: 0;
     border-left: none;
   }
-  .contact-info {
-    display: none;
-  }
   #mobile-contact-info-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding-left: 10px;
   }
+  .contact-info {
+    display: none;
+  }
+  .contact-info-mobile {
+    display: unset;
+  }
   .contact-info-mobile a {
     font-size: 0.8rem;
     margin-bottom: 10px;
     color: var(--primary-highlight);
+  }
+  .contact-info-mobile button {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+    text-align: center;
   }
   .contact-info-mobile a:visited {
     color: var(--secondary-highlight);
