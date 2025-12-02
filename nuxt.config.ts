@@ -17,6 +17,11 @@ export default defineNuxtConfig({
       ],
       script: [
         {
+          src: 'https://cloud.umami.is/script.js',
+          defer: true,
+          'data-website-id': '161741e5-1de4-43c7-90f8-65b24e637f6b',
+        },
+        {
           tagPosition: 'bodyOpen',
           innerHTML:
             `(function(){
