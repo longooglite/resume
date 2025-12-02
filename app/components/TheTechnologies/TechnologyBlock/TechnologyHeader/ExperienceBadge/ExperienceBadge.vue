@@ -13,7 +13,7 @@ const props = defineProps<{
   border-radius: 4px;
   padding: 4px 8px;
   display: inline-flex;
-  color: #ffffff;
+  color: var(--background-color);
   font-size: 12px;
   font-weight: 600;
 }

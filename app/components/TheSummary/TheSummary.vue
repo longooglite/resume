@@ -3,9 +3,12 @@ import { useResumeData } from '@/composables/useResumeData'
 
 const resumeData = useResumeData()
 const { professional_summary } = resumeData.resume.value
+const props = defineProps<{
+  loaded: boolean
+}>()
 </script>
 <template>
-  <div class="the-summary">
+  <div class="the-summary" v-show="props.loaded">
     <h2>Summary</h2>
     <p>{{ professional_summary }}</p>
   </div>
