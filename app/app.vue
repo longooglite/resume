@@ -28,9 +28,8 @@ useHead({
       type: 'application/ld+json',
       innerHTML: JSON.stringify(jsonLd),
     },
-  ]
+  ],
 })
-
 </script>
 <template>
   <NuxtLayout>
@@ -66,7 +65,9 @@ body {
   --text-color: var(--app-dark);
   --background-color: var(--app-light);
   --contrast-color: var(--app-dark);
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
 }
 body.light {
   display: unset;
@@ -80,6 +81,11 @@ body.dark {
   --primary-highlight: var(--app-light);
   --secondary-highlight: var(--app-light);
   --contrast-color: var(--app-light);
+}
+@media (max-width: 640px) {
+  main {
+    padding: 10px;
+  }
 }
 h1,
 h2,
