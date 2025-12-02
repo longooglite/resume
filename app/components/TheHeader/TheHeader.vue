@@ -63,9 +63,7 @@ const toggleMobileExpanded = () => {
       </button>
       <div v-show="mobileExpanded" id="mobile-contact-info-list">
         <a :href="telHref">{{ basics.phone }}</a>
-        <a :href="`mailto:${basics.email}`">{{
-        basics.email
-        }}</a>
+        <a :href="`mailto:${basics.email}`">{{ basics.email }}</a>
         <a
           v-for="[linkKey, link] in links"
           :key="linkKey"
@@ -125,7 +123,7 @@ const toggleMobileExpanded = () => {
   cursor: pointer;
   padding: 0;
   margin: 0;
-  font-size: 16px;  
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 10px;
   color: var(--text-color);
@@ -141,7 +139,7 @@ const toggleMobileExpanded = () => {
   .contact-info {
     display: none;
   }
-  .contact-info-mobile {
+  #mobile-contact-info-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
