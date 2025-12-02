@@ -5,6 +5,9 @@ import { experienceContainsTechnology } from '@/utils/experienceContainsTech'
 import { skillLevelToString } from '@/utils/skillLevelToString'
 import TechnologyBlock from './TechnologyBlock/TechnologyBlock.vue'
 const { technicalSkills, experiences } = useResumeData()
+const props = defineProps<{
+  loaded: boolean
+}>()
 const sortedTechnicalSkills = computed(() => {
   return [...technicalSkills.value]
     .filter((skill) => skill.level > 5)
@@ -24,7 +27,7 @@ const sortedTechnicalSkills = computed(() => {
 })
 </script>
 <template>
-  <div class="the-technologies">
+  <div class="the-technologies" v-show="props.loaded">
     <h2>Technologies</h2>
     <div class="technologies-list">
       <TechnologyBlock

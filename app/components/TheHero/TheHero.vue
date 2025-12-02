@@ -2,7 +2,11 @@
 import { useResumeData } from '@/composables/useResumeData'
 import { computed } from 'vue'
 import TheSummary from '@/components/TheSummary/TheSummary.vue'
-
+import { useTheme } from '@/composables/useTheme'
+import { PhMoonStars, PhSun } from 'phosphor-vue'
+const props = defineProps<{
+  loaded: boolean
+}>()
 const resumeData = useResumeData()
 const { basics } = resumeData.resume.value
 const links = computed(() => {
@@ -13,10 +17,15 @@ const links = computed(() => {
 const telHref = computed(() => {
   return `tel:${basics.phone?.replace(/[^0-9]/g, '')}`
 })
+const { toggleTheme, theme } = useTheme()
 </script>
 <template>
-  <div class="the-hero">
+  <div class="the-hero" v-show="props.loaded">
     <h1>{{ basics.name }}</h1>
+    <button @click="toggleTheme">
+      <PhMoonStars v-if="theme === 'light'" />
+      <PhSun v-if="theme === 'dark'" />
+    </button>
     <div class="contact-info">
       <a :href="telHref">{{ basics.phone }}</a>
       <a :href="`mailto:${basics.email}`">{{ basics.email }}</a>
@@ -30,14 +39,30 @@ const telHref = computed(() => {
         {{ linkKey }}
       </a>
     </div>
-    <TheSummary />
+    <TheSummary :loaded="props.loaded" />
   </div>
 </template>
 <style scoped>
+body.dark .the-hero h1 {
+  color: var(--app-light);
+}
 .the-hero {
   width: 100%;
   max-width: var(--app-max-width);
   margin: 0 auto;
+}
+.the-hero button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: var(--text-color);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 1000;
 }
 .the-hero h1 {
   font-size: 8rem;

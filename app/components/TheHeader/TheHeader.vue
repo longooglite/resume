@@ -3,6 +3,9 @@ import { useResumeData } from '@/composables/useResumeData'
 import { computed, onMounted, onUnmounted, ref } from 'vue'
 import { PhCaretDown, PhCaretUp } from 'phosphor-vue'
 
+const props = defineProps<{
+  loaded: boolean
+}>()
 const resumeData = useResumeData()
 const { basics } = resumeData.resume.value
 const links = computed(() => {
@@ -30,7 +33,7 @@ const toggleMobileExpanded = () => {
 }
 </script>
 <template>
-  <header class="the-header" v-show="isScrolled">
+  <header class="the-header" v-show="isScrolled && props.loaded">
     <h1>
       {{ basics.name }}
     </h1>
@@ -65,7 +68,7 @@ const toggleMobileExpanded = () => {
         target="_blank"
         class="contact-info-link"
       >
-        {{ linkKey }} test
+        {{ linkKey }}
       </a>
     </div>
   </header>
@@ -75,12 +78,13 @@ const toggleMobileExpanded = () => {
   width: 100%;
   position: sticky;
   top: 0;
-  background-color: var(--app-bg);
+  background-color: var(--background-color);
   width: 100%;
   max-width: var(--app-max-width);
   margin: 0 auto;
   border-bottom: 1px solid var(--border-color);
   border-left: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 .the-header h1 {
   font-family:
@@ -114,9 +118,10 @@ const toggleMobileExpanded = () => {
   cursor: pointer;
   padding: 0;
   margin: 0;
-  font-size: 16px;
+  font-size: 16px;  
   font-weight: 600;
   margin-bottom: 10px;
+  color: var(--text-color);
 }
 @media (max-width: 640px) {
   .the-header {

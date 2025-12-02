@@ -3,9 +3,12 @@ import ExperienceBlock from '@/components/TheExperience/ExperienceBlock/Experien
 import { useResumeData } from '@/composables/useResumeData'
 import { MAX_APP_WIDTH } from '@/utils/styles'
 const { experiencesSorted } = useResumeData()
+const props = defineProps<{
+  loaded: boolean
+}>()
 </script>
 <template>
-  <div class="the-experience">
+  <div class="the-experience" v-show="props.loaded">
     <h2>Experience</h2>
     <div class="experience-blocks" :style="{ maxWidth: `${MAX_APP_WIDTH}px` }">
       <ExperienceBlock
