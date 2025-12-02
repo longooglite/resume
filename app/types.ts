@@ -135,3 +135,5 @@ export interface TimelineSegment {
   x: number
   color: string
 }
+
+export type Theme = 'light' | 'dark'

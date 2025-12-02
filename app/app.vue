@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useHead } from 'nuxt/app'
-
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfilePage',
@@ -23,15 +22,15 @@ const jsonLd = {
     ],
   },
 }
-
 useHead({
   script: [
     {
       type: 'application/ld+json',
       innerHTML: JSON.stringify(jsonLd),
     },
-  ],
+  ]
 })
+
 </script>
 <template>
   <NuxtLayout>
@@ -41,16 +40,16 @@ useHead({
 
 <style>
 :root {
-  --app-bg: #f5f5f5;
-  --text-color: #0f172a;
+  --app-light: #f5f5f5;
+  --app-dark: #0f172a;
   --border-color: #ccc;
   --app-max-width: 1200px;
   --primary-highlight: #0f172a;
   --secondary-highlight: #475569;
 }
 body {
-  background-color: var(--app-bg);
-  color: var(--text-color);
+  background-color: var(--app-light);
+  color: var(--app-dark);
   font-family:
     'Public Sans',
     -apple-system,
@@ -63,6 +62,23 @@ body {
     'Liberation Sans',
     sans-serif;
   font-weight: 400;
+  --text-color: var(--app-dark);
+  --background-color: var(--app-light);
+  --contrast-color: var(--app-dark);
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+body.light {
+  display: unset;
+}
+body.dark {
+  display: unset;
+  background-color: var(--app-dark);
+  color: var(--app-light);
+  --text-color: var(--app-light);
+  --background-color: var(--app-dark);
+  --primary-highlight: var(--app-light);
+  --secondary-highlight: var(--app-light);
+  --contrast-color: var(--app-light);
 }
 h1,
 h2,
@@ -82,6 +98,6 @@ h6 {
     'Liberation Sans',
     sans-serif;
   font-weight: 600;
-  color: var(--primary-highlight);
+  color: var(--text-color);
 }
 </style>

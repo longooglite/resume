@@ -2,6 +2,27 @@ import { fileURLToPath } from 'node:url'
 import { URL } from 'node:url'
 // nuxt.config.ts
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Kirk Longuski',
+      script: [
+        {
+          tagPosition: 'bodyOpen',
+          innerHTML:
+            `(function(){
+              var m = document.cookie.match(/(?:^|; )theme=([^;]+)/);
+              if (!m) return;
+              var t = decodeURIComponent(m[1]);
+              if (t === 'dark' || t === 'light') {
+                document.body.classList.remove('dark','light');
+                document.body.classList.add(t);
+              }
+            })();`,
+        },
+      ],
+    },
+    
+  },
   compatibilityDate: '2024-11-01', // Recommended to lock behavior
   future: {
     compatibilityVersion: 4, // Explicitly opt-in to Nuxt 4 folder structure/behavior
@@ -12,11 +33,6 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   modules: ['@pinia/nuxt'],
-  app: {
-    head: {
-      title: 'Kirk Longuski',
-    },
-  },
   routeRules: {
     '/**': { prerender: true },
   },
