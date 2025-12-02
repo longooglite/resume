@@ -4,7 +4,17 @@ import { URL } from 'node:url'
 export default defineNuxtConfig({
   app: {
     head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
       title: 'Kirk Longuski',
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Front-End Architect & Team Lead with a decade of experience in TypeScript, React, Vue, and modernization.',
+        },
+      ],
       script: [
         {
           tagPosition: 'bodyOpen',

@@ -12,7 +12,9 @@ onMounted(() => {
 </script>
 <template>
   <TheHeader :loaded="loaded" />
-  <TheHero :loaded="loaded"/>
-  <TheExperience :loaded="loaded"/>
-  <TheTechnologies :loaded="loaded"/>
+  <main id="main-content">
+    <TheHero :loaded="loaded"/>
+    <TheExperience :loaded="loaded"/>
+    <TheTechnologies :loaded="loaded"/>
+  </main>
 </template>

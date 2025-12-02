@@ -26,10 +26,16 @@ const hasLeadership = computed(
 </script>
 <template>
   <div class="experience-details">
-    <h4 @click="toggleExpanded">
-      Details
-      <PhCaretDown v-if="expanded" />
-      <PhCaretUp v-else />
+    <h4>
+      <button
+        @click="toggleExpanded"
+        :aria-expanded="expanded"
+        aria-controls="experience-details"
+      >
+        Details
+        <PhCaretDown v-if="expanded" aria-hidden="true" />
+        <PhCaretUp v-else aria-hidden="true" />
+      </button>
     </h4>
     <div
       class="experience-details-responsibilities"
@@ -89,14 +95,21 @@ const hasLeadership = computed(
 </template>
 <style scoped>
 h4 {
-  cursor: pointer;
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 600;
-  user-select: none;
-  display: flex;
+}
+h4 > button {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  color: var(--text-color);
+  display: inline-flex;
   align-items: center;
   gap: 10px;
+  font: inherit;
 }
 </style>

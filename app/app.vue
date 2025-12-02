@@ -34,6 +34,7 @@ useHead({
 </script>
 <template>
   <NuxtLayout>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <NuxtPage />
   </NuxtLayout>
 </template>
@@ -99,5 +100,23 @@ h6 {
     sans-serif;
   font-weight: 600;
   color: var(--text-color);
+}
+.skip-link {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 8px;
+  padding: 8px 12px;
+  background: var(--contrast-color);
+  color: var(--background-color);
+  border-radius: 4px;
 }
 </style>

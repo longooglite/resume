@@ -45,31 +45,38 @@ const toggleMobileExpanded = () => {
         :key="linkKey"
         :href="link"
         target="_blank"
+        rel="noopener noreferrer"
         class="contact-info-link"
       >
         {{ linkKey }}
       </a>
     </div>
-    <div class="contact-info-mobile">
-      <button @click="toggleMobileExpanded">
-        Contact Info
-        <PhCaretDown v-if="mobileExpanded" />
-        <PhCaretUp v-else />
-      </button>
-      <a v-show="mobileExpanded" :href="telHref">{{ basics.phone }}</a>
-      <a v-show="mobileExpanded" :href="`mailto:${basics.email}`">{{
-        basics.email
-      }}</a>
-      <a
-        v-show="mobileExpanded"
-        v-for="[linkKey, link] in links"
-        :key="linkKey"
-        :href="link"
-        target="_blank"
-        class="contact-info-link"
+    <div class="contact-info-mobile" id="mobile-contact-info">
+      <button
+        @click="toggleMobileExpanded"
+        :aria-expanded="mobileExpanded"
+        aria-controls="mobile-contact-info-list"
       >
-        {{ linkKey }}
-      </a>
+        Contact Info
+        <PhCaretDown v-if="mobileExpanded" aria-hidden="true" />
+        <PhCaretUp v-else aria-hidden="true" />
+      </button>
+      <div v-show="mobileExpanded" id="mobile-contact-info-list">
+        <a :href="telHref">{{ basics.phone }}</a>
+        <a :href="`mailto:${basics.email}`">{{
+        basics.email
+        }}</a>
+        <a
+          v-for="[linkKey, link] in links"
+          :key="linkKey"
+          :href="link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-info-link"
+        >
+          {{ linkKey }}
+        </a>
+      </div>
     </div>
   </header>
 </template>
