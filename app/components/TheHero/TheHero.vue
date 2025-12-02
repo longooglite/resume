@@ -27,8 +27,8 @@ const { toggleTheme, theme } = useTheme()
       :aria-pressed="theme === 'dark'"
       aria-label="Toggle dark mode"
     >
-      <PhMoonStars aria-hidden="true" />
-      <PhSun aria-hidden="true" />
+      <PhMoonStars v-if="theme === 'light'" aria-hidden="true" />
+      <PhSun v-if="theme === 'dark'" aria-hidden="true" />
     </button>
     <div class="contact-info">
       <a :href="telHref">{{ basics.phone }}</a>
