@@ -58,7 +58,7 @@ const toggleMobileExpanded = () => {
         aria-controls="mobile-contact-info-list"
       >
         Contact Info
-        <PhCaretDown v-if="mobileExpanded" aria-hidden="true" />
+        <PhCaretDown v-if="!mobileExpanded" aria-hidden="true" />
         <PhCaretUp v-else aria-hidden="true" />
       </button>
       <div v-show="mobileExpanded" id="mobile-contact-info-list">
